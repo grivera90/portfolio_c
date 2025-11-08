@@ -18,7 +18,7 @@ Cada proyecto está contenido en su propio directorio como submódulo Git, permi
 
 ### 1. Multi-Driver System: TCA8418 Keypad + TCA9554 I/O Expander
 
-**Directorio:** [`tca8418-keyboard-system/`](./tca8418-keyboard-system)
+**Directorio:** [`tca8418_driver_manager/`](./tca8418_driver_manager)
 
 En este proyecto intento dejar expresado la ventaja de trabajar por capas haciendo uso del patrón Hardware Proxy, un mecanismo de IPC (Inter Process Communication) y gestión de múltiples periféricos I2C compartiendo el mismo bus en un ESP32S3. Tenemos un driver que implementa un teclado matricial más un driver expansor de I/O's, mostrando la versatilidad y reutilización del patrón de diseño.
 
@@ -61,37 +61,7 @@ En este proyecto intento dejar expresado la ventaja de trabajar por capas hacien
 #### Arquitectura del Sistema
 
 ```
-┌─────────────────────────────────────────────────────┐
-│                   APPLICATION LAYER                 │
-│  (Inicializa cola, consume eventos, control lógico) │
-└──────────────────┬───────────────┬──────────────────┘
-                   │               │
-          ┌────────▼────────┐  ┌───▼──────────────┐
-          │ Keyboard Manager│  │  App Logic (LEDs,│
-          │   (Consume cola)│  │   Display, etc)  │
-          └────────┬────────┘  └────┬─────────────┘
-                   │                │
-         ┌─────────▼────────────────▼─────────────┐
-         │         DRIVER LAYER (HW Proxy)        │
-         │  ┌──────────────┐  ┌─────────────────┐ │
-         │  │TCA8418 Driver│  │ TCA9554 Driver  │ │
-         │  │  (Keypad)    │  │  (I/O Expander) │ │
-         │  └──────┬───────┘  └─────────┬───────┘ │
-         └─────────┼──────────────────┬─┼─────────┘
-                   │                  │ │
-         ┌─────────▼──────────────────▼─▼─────────┐
-         │         BSP LAYER (Hardware API)       │
-         │    ┌──────────────────────────────┐    │
-         │    │  I2C Shared Bus Interface    │    │
-         │    │  GPIO, Timers, Interrupts    │    │
-         │    └──────────────────────────────┘    │
-         └────────────────┬───────────────────────┘
-                          │
-         ┌────────────────▼───────────────────────┐
-         │      HARDWARE (MCU + Peripherals)      │
-         │   TCA8418 (0x34) ←─┬─→ TCA9554 (0x38)  │
-         │                  I2C Bus               │
-         └────────────────────────────────────────┘
+[TBD]
 ```
 
 #### Características Técnicas
