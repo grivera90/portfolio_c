@@ -1,0 +1,3 @@
+[submodule "tca8418_driver_manager"]
+	path = tca8418_driver_manager
+	url = git@github.com:grivera90/tca8418_driver_manager.git
