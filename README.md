@@ -138,6 +138,17 @@ Cada proyecto incluye:
 - Diagramas de arquitectura (cuando aplica)
 - Ejemplos de uso
 
+Descarga:
+
+Por cada repositorio ejecutar:
+
+- git submodule init
+- git submodule update
+
+O en el proyecto para inicializar y descargar todos los sub-modulos:
+
+- git clone --recursive git@github.com:grivera90/portfolio_c.git
+
 ## 🔄 Actualizaciones Futuras
 
 Este portfolio está en constante evolución. Próximos proyectos incluirán:
@@ -154,10 +165,6 @@ Este portfolio está en constante evolución. Próximos proyectos incluirán:
 - GitHub: [https://github.com/grivera90](https://github.com/tu-usuario)
 - LinkedIn: [https://www.linkedin.com/in/gonzalo-rivera-7072a262/](https://linkedin.com/in/tu-perfil)
 - Email: gonzaloriveras90@gmail.com
-
-## 📄 Licencia
-
-[MIT License](LICENSE) - Siéntete libre de usar este código para aprendizaje y referencia.
 
 ---
 
