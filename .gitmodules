@@ -1,3 +1,6 @@
 [submodule "tca8418_driver_manager"]
 	path = tca8418_driver_manager
 	url = git@github.com:grivera90/tca8418_driver_manager.git
+[submodule "pid_pump_ctrl"]
+	path = pid_pump_ctrl
+	url = git@github.com:grivera90/pid_pump_ctrl.git
