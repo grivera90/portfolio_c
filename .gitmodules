@@ -1,3 +1,8 @@
-[submodule "tca8418_driver_manager"]
-	path = tca8418_driver_manager
-	url = git@github.com:grivera90/tca8418_driver_manager.git
+[submodule "hardware_proxy_pattern"]
+	path = hardware_proxy_pattern
+	url = git@github.com:grivera90/hardware_proxy_pattern.git
+	branch = main
+[submodule "observer_pattern"]
+	path = observer_pattern
+	url = git@github.com:grivera90/observer_pattern.git
+	branch = main
